@@ -6,8 +6,8 @@ local isTalking = false
 local Playerid = PlayerId()
 local ServerId = 0
 
-local QBCore = exports['qb-core']:GetCoreObject()
-local PlayerData = QBCore.Functions.GetPlayerData()
+local PlayerData = {}
+local Framework = exports['qbx-core']:GetCoreObject()
 
 function Startup()
     ServerId = GetPlayerServerId(Playerid)
@@ -19,14 +19,20 @@ function Startup()
 end
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
-    PlayerData = QBCore.Functions.GetPlayerData()
+    PlayerData = Framework.Functions.GetPlayerData()
     Startup()
 end)
 
--- Rest of the file remains the same, just replace ESX references with QBCore equivalents
+-- Update player data when it changes
+RegisterNetEvent('QBCore:Player:SetPlayerData', function(newPlayerData)
+    PlayerData = newPlayerData
+end)
+
+-- Rest of the file remains largely the same, just using Framework instead of QBCore
 -- For example:
--- Replace ESX.PlayerData.ped with PlayerPedId()
--- Replace ESX.PlayerData.job with PlayerData.job
--- Replace ESX.PlayerData.accounts with PlayerData.money
--- Replace ESX.TriggerServerCallback with QBCore.Functions.TriggerCallback
--- Replace ESX.RegisterInput with RegisterKeyMapping
+-- Replace QBCore.Functions.GetPlayerData() with Framework.Functions.GetPlayerData()
+-- Replace QBCore.Functions.TriggerCallback with Framework.Functions.TriggerCallback
+-- Replace QBCore.Functions.Notify with Framework.Functions.Notify
+```
+
+```
