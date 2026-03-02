@@ -9,4 +9,21 @@ Config.font = {
     url     = 'https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap'
 }
 
--- Rest of the config remains the same
+Config.ui = {
+    showServerLogo    = true,
+    showWalletMoney   = true,
+    showBankMoney     = true,
+    showBlackMoney    = true,
+    showSocietyMoney  = true,
+    showHealth        = true,
+    showArmor         = true,
+    showStamina       = true,
+    showHunger        = true,
+    showThirst        = true,
+    showID            = true,
+    showJob           = true,
+    showDate          = true,
+    showLocation      = true,
+    showVoice         = true,
+    showWeapons       = true,
+}

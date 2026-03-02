@@ -18,12 +18,14 @@ files {
     'html/img/vehicle-lights-high.png',
     'html/img/vehicle-seatbelt.png',
     'html/img/weapon-bullets.png',
-    -- Add all other image files here
 }
 
 shared_scripts {
     'config.lua',
-    '@ox_lib/init.lua' -- Add this line for proper locale initialization
+    'locales/en.lua',
+    'locales/es.lua',
+    'locales/br.lua',
+    '@ox_lib/init.lua'
 }
 
 client_scripts {
@@ -32,5 +34,5 @@ client_scripts {
 
 dependencies {
     'qbx-core',
-    'ox_lib' -- Required for locale handling
+    'ox_lib'
 }

@@ -7,7 +7,7 @@ local Playerid = PlayerId()
 local ServerId = 0
 
 local PlayerData = {}
-local Framework = exports['qbx-core']:GetCoreObject()
+local QBCore = exports['qbx-core']:GetCoreObject()
 
 function Startup()
     ServerId = GetPlayerServerId(Playerid)
@@ -19,7 +19,7 @@ function Startup()
 end
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
-    PlayerData = Framework.Functions.GetPlayerData()
+    PlayerData = QBCore.Functions.GetPlayerData()
     Startup()
 end)
 
