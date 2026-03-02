@@ -1,4 +1,5 @@
 Locales = Locales or {}
+
 Locales['br'] = {
     ['you_are_on_location'] = 'Você está em <strong>%s</strong>',
 

@@ -23,7 +23,7 @@ files {
 
 shared_scripts {
     'config.lua',
-    'locales/*.lua'
+    '@ox_lib/init.lua' -- Add this line for proper locale initialization
 }
 
 client_scripts {
@@ -32,5 +32,5 @@ client_scripts {
 
 dependencies {
     'qbx-core',
-    'qbx_management'
+    'ox_lib' -- Required for locale handling
 }
